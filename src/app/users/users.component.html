@@ -1,0 +1,21 @@
+<h1>Users</h1>
+
+<ul>
+  <li *ngFor="let user of usersOnline$">
+    <a routerLink='/details{{ user.id }}'>{{ user.name }}</a>
+    <ul>
+      <li>{{ user.email }}</li>
+      <li>
+        <a href="http://{{ user.website }}"> {{ user.website }}</a>
+      </li>
+    </ul>
+  </li>
+  <li *ngFor="let lUser of usersLocal$">
+    <a routerLink='/details{{ lUser.empId }}'> {{ lUser.empName }}</a>
+    <ul>
+      <li>{{ lUser.job }}</li>
+      <li> {{lUser.hiredate | date:'longDate'}} </li>
+
+    </ul>
+  </li>
+</ul>
