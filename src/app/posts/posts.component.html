@@ -1,11 +1,13 @@
 <h1>Users Posts</h1>
-<ul *ngFor='let post of posts$'>
-  <li>
-    {{ post.title }}
+<ul>
+  <li *ngFor="let p of posts$">
+    <ul>
+      <li>
+        {{ p.title }}
+      </li>
+      <li>
+        {{ p.body }}
+      </li>
+    </ul>
   </li>
-  <li>
-    {{ post.body }}
-
-  </li>
-
 </ul>

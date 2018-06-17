@@ -14,8 +14,11 @@ export class DataService {
    getUsersLocal() {
      return this.http.get('http://localhost:8080/AngularDemo/rs/emps');
    }
+   getUser(userid) {
+      return this.http.get('https://jsonplaceholder.typicode.com/users/' + userid);
+   }
    getPosts() {
-     return this.http.get('https://jsonplaceholder.typicode.com/post');
+     return this.http.get('https://jsonplaceholder.typicode.com/posts');
    }
 
 }
