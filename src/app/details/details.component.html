@@ -1,11 +1,15 @@
-<h1> {{lu$.empName}} </h1>
-<ul>
-  <li><strong>Emp Job : </strong> {{lu$.job}}</li>
-</ul>
-<h1>{{u$.name}}</h1>
+<div *ngIf="lu$">
+  <h1> {{lu$.empName}} </h1>
+  <ul>
+    <li><strong>Emp Job : </strong> {{lu$.job}}</li>
+  </ul>
+</div>
 
+<div *ngIf="u$">
+  <h1>{{u$.name}}</h1>
 <ul>
   <li><strong>Username : </strong> {{u$.username}}</li>
   <li><strong>Email : </strong> {{u$.email}}</li>
   <li><strong>Phone : </strong> {{u$.phone}}</li>
 </ul>
+</div>

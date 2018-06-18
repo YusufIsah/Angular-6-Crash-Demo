@@ -15,6 +15,7 @@ export class DetailsComponent implements OnInit {
   lu$: Object;
 
   constructor(private data: DataService, private route: ActivatedRoute ) {
+
     this.route.params.subscribe( params => this.u$ = params.id);
     this.route.params.subscribe( params => this.lu$ = params.id);
    }

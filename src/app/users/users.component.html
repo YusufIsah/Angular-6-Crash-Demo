@@ -1,6 +1,6 @@
 <h1>Users</h1>
 
-<ul>
+<ul [@listStagger] = "usersOnline$">
   <li *ngFor="let user of usersOnline$">
     <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
 
@@ -11,7 +11,10 @@
       </li>
     </ul>
   </li>
-  <li *ngFor="let lUser of usersLocal$">
+
+</ul>
+<ul [@listStagger] = "usersLocal$">
+  <li *ngFor="let lUser of usersLocal$" >
     <a routerLink='/details/{{lUser.empId}}'> {{ lUser.empName }}</a>
     <ul>
       <li>{{ lUser.job }}</li>
