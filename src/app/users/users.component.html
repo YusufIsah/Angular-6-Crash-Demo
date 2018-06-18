@@ -11,12 +11,12 @@
       </li>
     </ul>
   </li>
-  <!-- <li *ngFor="let lUser of usersLocal$">
-    <a routerLink='/details{{ lUser.empId }}'> {{ lUser.empName }}</a>
+  <li *ngFor="let lUser of usersLocal$">
+    <a routerLink='/details/{{lUser.empId}}'> {{ lUser.empName }}</a>
     <ul>
       <li>{{ lUser.job }}</li>
       <li> {{lUser.hiredate | date:'longDate'}} </li>
 
     </ul>
-  </li> -->
+  </li>
 </ul>
