@@ -2,7 +2,7 @@
 
 <ul [@listStagger] = "usersOnline$">
   <li *ngFor="let user of usersOnline$">
-    <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+    <a routerLink="/details/{{user.id}}" (click)='onlineUserClick()'>{{ user.name }}</a>
 
     <ul>
       <li>{{ user.email }}</li>
@@ -15,7 +15,7 @@
 </ul>
 <ul [@listStagger] = "usersLocal$">
   <li *ngFor="let lUser of usersLocal$" >
-    <a routerLink='/details/{{lUser.empId}}'> {{ lUser.empName }}</a>
+    <a routerLink='/details/{{lUser.empId}}' (click)='onlocalUserClick()'> {{ lUser.empName }}</a>
     <ul>
       <li>{{ lUser.job }}</li>
       <li> {{lUser.hiredate | date:'longDate'}} </li>

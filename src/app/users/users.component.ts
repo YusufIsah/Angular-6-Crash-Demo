@@ -28,6 +28,7 @@ export class UsersComponent implements OnInit {
 
   usersOnline$: Object;
   usersLocal$: Object;
+  switchme = '';
 
 
   constructor(private data: DataService) { }
@@ -39,6 +40,12 @@ export class UsersComponent implements OnInit {
     this.data.getUsersLocal().subscribe(
       data => this.usersLocal$ = data
     );
+  }
+  onlineUserClick() {
+    this.switchme = 'online';
+  }
+  onlocalUserClick() {
+    this.switchme = 'local';
   }
 
 }
