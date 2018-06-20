@@ -43,9 +43,11 @@ export class UsersComponent implements OnInit {
   }
   onlineUserClick() {
     this.switchme = 'online';
+    this.data.changeMessage(this.switchme);
   }
   onlocalUserClick() {
     this.switchme = 'local';
+    this.data.changeMessage(this.switchme);
   }
 
 }

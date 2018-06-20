@@ -1,11 +1,11 @@
-<div *ngIf="lu$">
+<div *ngIf="userObj==='local'">
   <h1> {{lu$.empName}} </h1>
   <ul>
     <li><strong>Emp Job : </strong> {{lu$.job}}</li>
   </ul>
 </div>
 
-<div *ngIf="u$">
+<div *ngIf="userObj==='online'">
   <h1>{{u$.name}}</h1>
 <ul>
   <li><strong>Username : </strong> {{u$.username}}</li>

@@ -14,16 +14,18 @@ export class DetailsComponent implements OnInit {
 
   u$: Object;
   lu$: Object;
-  userObj = UsersComponent.prototype.switchme;
+  userObj: string;
 
   constructor(private data: DataService, private route: ActivatedRoute ) {
 
     this.route.params.subscribe( params => this.u$ = params.id);
     this.route.params.subscribe( params => this.lu$ = params.id);
+    this.data.currentMessage.subscribe(message => this.userObj = message);
+
    }
 
   ngOnInit() {
-
+    // this.data.currentMessage.subscribe(message => this.userObj = message);
     this.data.getUser(this.u$).subscribe(
       data => this.u$ = data
     );
