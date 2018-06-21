@@ -1,4 +1,38 @@
-<div id="container">
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar ie-nav" [containerInside]="false">
+  <logo>
+      <a class="logo navbar-brand" href="#"><strong>Navbar</strong></a>
+  </logo>
+  <links>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item  waves-light" mdbWavesEffect>
+              <a routerLink="" [class.activated]="currntUrl == '/'" [class.nav-link]="true">Home</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a routerLink="/posts" [class.activated]="currntUrl == '/posts'"  [class.nav-link]="true">Posts</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link">Opinions</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><i class="fa fa-instagram"></i></a>
+          </li>
+      </ul>
+  </links>
+</mdb-navbar>
+<!-- Main -->
+<!-- /.Main -->
+<div id="container" class="sidediv">
   <app-sidebar></app-sidebar>
 <div id="content">
 <router-outlet></router-outlet>
