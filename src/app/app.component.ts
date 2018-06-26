@@ -9,6 +9,8 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent {
   title = 'app';
   currntUrl: string;
+
+  // Constructor
   constructor (private route: Router) {
       route.events.subscribe((_: NavigationEnd) => this.currntUrl = _.url);
 
